@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "6edf85c7-fea8-4c68-a473-2c75dd251c08",
+		"name": "apisudeste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1/api/public/api/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1/api/public/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "suzane.freires@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "teste",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "Gera Token de acesso"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1/api/public/api/produtos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2FwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTk2Mjk5NjEzLCJleHAiOjE1OTYzMDMyMTMsIm5iZiI6MTU5NjI5OTYxMywianRpIjoiWGV1V3dLSVRveEdQbms0MiIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.IZexHRC6fZCzSDmWhJ5M2mqXEsQemQG7Mcq9_fmcKeY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/produtos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"produtos"
+					]
+				},
+				"description": "Listagem de Produtos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1/api/public/api/produtos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2FwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTk2MzIxNDUxLCJleHAiOjE1OTYzMjUwNTEsIm5iZiI6MTU5NjMyMTQ1MSwianRpIjoieG9NNjQ4V0VWeEJiUktCViIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.pVFXv-cciv4vFYBKwLnPAOgl23Do-afMGIsLFpsmtt8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Produto agricola nome",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/produtos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"produtos"
+					]
+				},
+				"description": "Cadastro de Produtos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1/api/public/api/culturas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2FwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTk2MzAxNzIyLCJleHAiOjE1OTYzMDUzMjIsIm5iZiI6MTU5NjMwMTcyMiwianRpIjoiUGVzRWFIWWhuVXhoM1U0VCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.ArQw_jTclRnZrWTmFxC1rpnOkx9R49JUgD502KXSpMM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/culturas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"culturas"
+					]
+				},
+				"description": "Listagem de Culturas"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1/api/public/api/culturas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2FwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTk2MzAxNzIyLCJleHAiOjE1OTYzMDUzMjIsIm5iZiI6MTU5NjMwMTcyMiwianRpIjoiUGVzRWFIWWhuVXhoM1U0VCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.ArQw_jTclRnZrWTmFxC1rpnOkx9R49JUgD502KXSpMM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Cultura Nome 1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/culturas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"culturas"
+					]
+				},
+				"description": "Cadastro de Culturas"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1/api/public/api/pragas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2FwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTk2MzAxNzIyLCJleHAiOjE1OTYzMDUzMjIsIm5iZiI6MTU5NjMwMTcyMiwianRpIjoiUGVzRWFIWWhuVXhoM1U0VCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.ArQw_jTclRnZrWTmFxC1rpnOkx9R49JUgD502KXSpMM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/pragas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"pragas"
+					]
+				},
+				"description": "Listagem de Pragas"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1/api/public/api/pragas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2FwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTk2MzAxNzIyLCJleHAiOjE1OTYzMDUzMjIsIm5iZiI6MTU5NjMwMTcyMiwianRpIjoiUGVzRWFIWWhuVXhoM1U0VCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.ArQw_jTclRnZrWTmFxC1rpnOkx9R49JUgD502KXSpMM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Nome da praga 1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/pragas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"pragas"
+					]
+				},
+				"description": "Cadastro de Pragas"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1/api/public/api/relacoes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2FwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTk2MzAxNzIyLCJleHAiOjE1OTYzMDUzMjIsIm5iZiI6MTU5NjMwMTcyMiwianRpIjoiUGVzRWFIWWhuVXhoM1U0VCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.ArQw_jTclRnZrWTmFxC1rpnOkx9R49JUgD502KXSpMM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "dosagem",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "id_produto",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "id_cultura",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id_praga",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/relacoes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"relacoes"
+					]
+				},
+				"description": "Cadastro de relação e dosagem"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1/api/public/api/relacoes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2FwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTk2MzAxNzIyLCJleHAiOjE1OTYzMDUzMjIsIm5iZiI6MTU5NjMwMTcyMiwianRpIjoiUGVzRWFIWWhuVXhoM1U0VCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.ArQw_jTclRnZrWTmFxC1rpnOkx9R49JUgD502KXSpMM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/relacoes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"relacoes"
+					]
+				},
+				"description": "Consulta de relações"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1/api/public/api/relatorio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjFcL2FwaVwvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNTk2MzIwNjIyLCJleHAiOjE1OTYzMjQyMjIsIm5iZiI6MTU5NjMyMDYyMiwianRpIjoiNlp0akpBSWJDNDhFanpSSCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.8-i2q3MWLe64KbIfl4MYBi2ch7-re0zS892eMOxK1DA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1/api/public/api/relatorio",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"public",
+						"api",
+						"relatorio"
+					]
+				},
+				"description": "PDF"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
